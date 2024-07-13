@@ -78,6 +78,8 @@ div.logobar {
 
 img.kyledevopslogo {
     width: 14vw;
+    max-width: 240px;
+    min-width: 200px;
     padding: 0.5vw 1vw;
 }
 
@@ -135,7 +137,7 @@ div.navbar {
     position: fixed;
     z-index: 50;
     height: 4.1vw;
-    max-height: 77px;
+    max-height: 76px;
     min-height: 20px;
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
@@ -159,7 +161,7 @@ div.navbar {
     /* font-size: 7vh; */
     font-size: 55px;
     font-family: 'Ubuntu', sans-serif;
-    padding: 42vh 2vw;
+    padding: 43vh 2vw;
     /* padding: 350px 2vw; */
     background-color: black;
 }
