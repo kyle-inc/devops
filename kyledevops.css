@@ -51,12 +51,16 @@ vsc-initialized dark-theme {
 /* darkmode css */
 
 :root {
+    --body-background: white;
+    --navbar-background: white;
+    --text-color-primary: black;
+    --text-color-secondary: grey;
+}
+
+.dark-theme{
     --body-background: black;
-    --logobar-background: black;
-    --navbar-background: #050100;
-    --signinbtn-border: #050100;
-    --textdefault-color: black;
-    --cardtwoprofile-background: white;
+    --navbar-background: black;
+    --text-color: white;
 }
 
 .a {
@@ -64,91 +68,108 @@ vsc-initialized dark-theme {
     cursor: pointer;
 }
 
-div.logobar {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100vw;
-    display: block;
-    z-index: 100;
-    background: var(--logobar-background);
-    overflow: hidden;
-}
 
-img.kyledevopslogo {
-    width: 14vw;
-    max-width: 240px;
-    min-width: 200px;
-    padding: 0.5vw 1vw;
-}
 
-div.navbar {
+
+
+.navigation-header {
     position: fixed;
-    z-index: 100;
+    background-color: var(--navbar-background);
+    padding: 0px 10px;
+    height: 60px;
+    width: 100%;
     top: 0;
-    left: 0px;
-    right: 0px;
-    width: 100vw;
-    display: block;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+nav {
+    width: 97%;
+    border-radius: 10px;
+    /* max-width: 1650px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--navbar-background);
 }
 
-.navbarcontent {
-    width: 80vw;
-    margin-top: 0;
-    margin-right: 1vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-content: center;
-    flex-wrap: wrap;
-    float: right;
+/* .logo-container>a {
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+} */
+
+.devops-logo {
+    width: 220px;
+    /* padding: 10px 10px; */
 }
 
-.links {
-    color: whitesmoke;
-    padding: 1.175vw 2.5vw;
-    font-size: 1vw;
+.navigation-items {
+    display: flex;
+    gap: 70px;
+}
+
+.navigation-items>a {
+    display: flex;
+    color: var(--text-color-primary);
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
-    transition-duration: 0.1s;
+    font-weight: 500;
+    font-size: 18px;
+    transition: .15s ease-in-out;
 }
 
-.links:hover {
-    background-color: transparent;
-    color: #C9D1D9;
-    padding: 1.175vw 3.5vw;
-    font-size: 1vw;
-    /* border-bottom: 0.3vw solid limegreen; */
+.navigation-items>a:hover {
+    color: var(--text-color-secondary);
+    font-weight: 600;
+    padding: 0px 20px;
 }
 
-.navbarcontent a.active {
-    /* background-color: #4CAF50; */
-    border-bottom: 0.3vw solid transparent;
+.hamburger {
+    display: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color-primary);
 }
 
-.links.active:hover {
-    color: white;
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .hamburger #closeHam {
+        display: none;
+    }
+
+    .navigation-items {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 58px;
+        background-color: rgb(73, 51, 153);
+        width: 100%;
+        height: calc(100vh - 58px);
+        padding-top: 60px;
+        gap: 10vh;
+    }
 }
+
+
+
 
 .colorbar {
-    width: 100%;
     position: fixed;
-    z-index: 50;
-    height: 4.1vw;
-    max-height: 76px;
-    min-height: 20px;
-    background-color: #42378f;
-    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
-}
-
-.div0 {
     width: 100%;
-    height: 4.1vw;
-    max-height: 77px;
-    min-height: 20px;
-    background-color: transparent;
+    height: 5px;
+    margin-top: 60px;
+    /* background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%); */
+    background-color: lightsteelblue;
 }
 
 .textunderline {
@@ -158,60 +179,50 @@ div.navbar {
 
 .div1 {
     color: white;
-    /* font-size: 7vh; */
-    font-size: 55px;
+    font-size: 50px;
+    font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
-    padding: 43vh 2vw;
-    /* padding: 350px 2vw; */
+    padding: 46.5vh 2vw;
+    /* background-color: black; */
     background-color: black;
+    background-image: linear-gradient(180deg, white 10%, black 70%);
+}
+
+.div4 {
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    /* padding: 46.5vh 2vw; */
+    background-color: black;
+    background-image: linear-gradient(0deg, white 0%, black 70%);
 }
 
 .div2 {
     color: black;
-    /* font-size: 7vh; */
-    font-size: 55px;
+    font-size: 50px;
     font-family: 'Ubuntu', sans-serif;
     padding: 40vh 2vw;
-    /* padding: 330px 2vw; */
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
 }
 
-.container1 {
-    width: inherit;
-    height: inherit;
-}
 
-.div3container {
+.dummy {
     width: 100%;
+    height: 60px;
     background-color: black;
 }
 
 .div3 {
-    width: 40vw;
-    /* min-width: 412px; */
-    min-width: 300px;
-    /* min-height: 915px; */
-    padding: 43.5vh 5vw;
-    color: silver;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(https://kyle-inc.github.io/resource/kyledevops/teamfortnight.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 45px;
     font-family: 'Ubuntu', sans-serif;
-    background-color: black;
-    float: left;
-}
-
-.divhalf3 {
-    width: 40vw;
-    min-width: 340px;
-    padding: 8vh 4vw;
     color: silver;
-    /* background-color: #f53844; */
-    background-color: #523a78;
-    background-image: linear-gradient(316deg, #523a78 0%, #ee696b 74%);
-    /* egg gradient:remote control */
-    float: right;
-    margin-top: 12.5vh;
-    /* margin-bottom: 7vh; */
+    padding: 43.5vh 3vw;
 }
 
 .div4container {
@@ -257,13 +268,15 @@ div.navbar {
 
 .div6 {
     color: silver;
-    font-size: 8vh;
+    font-size: 45px;
     font-family: 'Ubuntu', sans-serif;
-    padding: 32vh 2vw;
-    /* background-color: #000000; */
-    /* background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff 0%, #000000 74%);
+    padding: 40vh 2vw;
+    background-color: white;
+    background-image: linear-gradient(0deg, white 10%, black 70%);
+    /* background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
+    /* background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #000000 74%); */
 }
 
 img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {

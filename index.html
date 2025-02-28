@@ -49,199 +49,83 @@
 
 <body>
 
-    <div class="navbar" id="navbar">
+    <header class="navigation-header">
 
-        <a href="https://kyle-inc.github.io/devops">
-            <img class="kyledevopslogo" id="kylelogoid"
-                src="https://kyle-inc.github.io/resource/kyledevops/kyledevopslogowhite.png" alt="kylelogo">
-        </a>
+        <nav>
 
-        <div class="navbarcontent">
+            <div class="logo-container">
 
-            <!-- <a class="active links" href="kyledevops.html">Home</a> -->
+                <a href="https://kyle-inc.github.io/devops">
+                    <img class="devops-logo" id="devops-logo-id" src="https://kyle-inc.github.io/resource/kyledevops/kyledevopslogoblack.png">
+                </a>
 
-            <a class="links" href="https://kyle-inc.github.io/kyle">KYLE</a>
+            </div>
 
-            <a class="links" href="cloud.caesura">Caesura Cloud</a>
+            <div class="navigation-items" id="navigation-items">
+                <a class="links" href="https://kyle-inc.github.io/kyle">KYLE</a>
+                <a class="links" href="cloud.caesura">Caesura Cloud</a>
+                <a class="links" href="https://kyle-inc.github.io/kyle/response">Response</a>
+                <a class="links" href="https://kyle-inc.github.io/search">KYLE Search</a>
+                <a class="links" href="https://kyle-inc.github.io/todo">Todo</a>
+                <a class="links" href="https://kyle-inc.github.io/notes">Notes</a>
+            </div>
 
-            <a class="links" href="https://kyle-inc.github.io/kyle/response">Response</a>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
 
-            <a class="links" href="https://kyle-inc.github.io/search">KYLE Search</a>
+            <script>
+                let openHam = document.querySelector('#openHam');
+                let closeHam = document.querySelector('#closeHam');
+                let navigationItems = document.querySelector('#navigation-items');
+        
+                const hamburgerEvent = (navigation, close, open) => {
+                    navigationItems.style.display = navigation;
+                    closeHam.style.display = close;
+                    openHam.style.display = open;
+                };
+        
+                openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+                closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+            </script>
 
-            <a class="links" href="https://kyle-inc.github.io/todo">Todo</a>
+        </nav>
 
-            <a class="links" href="https://kyle-inc.github.io/notes">Notes</a>
-
-            <a class="signinbtn, links" href="https://response-web.000webhostapp.com/chat.php?user_id=264992954">Contact
-                Us</a>
-
-        </div>
-
-    </div>
-
-
+    </header>
 
     <div class="colorbar"></div>
-
-
-
-    <div class="div0"></div>
-
-
 
     <div class="div1">
         <font style="color: slategray;">Thinking of working with us?</font>
         <font style="color: wheat;"> You'll be in good company!</font>
     </div>
 
-
+    <!-- <div class="div4">
+        <img src="https://kyle-inc.github.io/resource/kyledevops/devopsloopcropped.jpg" style="width: 100%;" alt="">
+    </div> -->
 
     <div class="div2">
         <font style="font-weight: 600;">We are KYLE Devops</font>
         <br>
-        <font style="color: silver; font-size: 40px;">We design and develop powerful yet beautiful Apps & Websites
+        <font style="color: silver; font-size: 40px;">We design and build powerful yet beautiful Apps & Websites
         </font>
     </div>
 
-
-
     <img src="https://kyle-inc.github.io/resource/kyledevops/services-solid.png" style="width: 100%;" alt="">
 
-
-    <div class="container1">
-
-        <div class="div3container">
-            <div class="div3">
-                We're a team of creative thinkers & makers...
-            </div>
-            <div class="divhalf3">
-                <img src="https://kyle-inc.github.io/resource/kyledevops/teamfortnight.webp" width="100%" alt="">
-            </div>
-        </div>
-
+    <div class="div3">
+        We're a team of creative thinkers & makers
+        <br>
+        <font class="textunderline">So let’s build something great together.</font>
     </div>
-
-    <br>
-
-    <div class="container1">
-
-        <div class="div4container">
-            <div class="divhalf4">
-                <img src="https://kyle-inc.github.io/resource/kyledevops/teamontablefortnight.webp" width="100%" alt="">
-            </div>
-            <div class="div4">
-                ...and we help you develop digital products that users can't put down.
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div class="div5">
-        <font class="textunderline">Let’s build something great together.</font>
-    </div>
-
-
 
     <div class="div6">
-        turning ideas
+        Turning ideas into digital products
         <br>
-        into digital products
-        <br>
-        that
-        <br>
-        millions of users love
+        that millions of users love.
     </div>
 
-
-    <img src="https://kyle-inc.github.io/resource/kyledevops/devopsloopcropped.jpg" style="width: 100%;" alt="">
-
-
-
-    <footer>
-
-        <div class="content">
-
-            <div class="top">
-
-                <div class="logo-details">
-                    <a href="https://kyle-inc.github.io/kyle">
-                        <img src="https://kyle-inc.github.io/resource/kyle/kylelogowhite.png"
-                            style="width: 8vw; min-width: 100px; padding: 5px 5px;" alt="">
-                    </a>
-                </div>
-
-                <div class="media-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-
-            </div>
-
-            <div class="link-boxes">
-
-                <ul class="box">
-                    <li class="link_name">API</li>
-                    <li><a href="#">KYLE Search</a></li>
-                    <li><a href="#">TODO</a></li>
-                    <li><a href="#">Response</a></li>
-                    <li><a href="#">Notes</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">Services</li>
-                    <li><a href="#">KYLE Search</a></li>
-                    <li><a href="#">TODO</a></li>
-                    <li><a href="#">Response</a></li>
-                    <li><a href="#">Notes</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">Account</li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">My account</a></li>
-                    <li><a href="#">Prefrences</a></li>
-                    <li><a href="#">Purchase</a></li>
-                </ul>
-
-                <ul class="box">
-                    <li class="link_name">KYLE Devops</li>
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">Photography</a></li>
-                    <li><a href="#">Photoshop</a></li>
-                </ul>
-
-                <ul class="box input-box">
-                    <li class="link_name">Subscribe</li>
-                    <li><input type="text" placeholder="Enter your email"></li>
-                    <li><input type="button" value="Subscribe"></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="bottom-details">
-
-            <div class="bottom_text">
-
-                <span class="copyright_text">Copyright © 2022 <a href="#">KYLE.inc.</a>All rights reserved</span>
-
-                <span class="policy_terms">
-                    <a href="#">Privacy policy</a>
-                    <a href="#">Terms & condition</a>
-                </span>
-
-            </div>
-
-        </div>
-
-    </footer>
 
 </body>
 
