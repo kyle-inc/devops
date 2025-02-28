@@ -260,12 +260,12 @@ nav {
 }
 
 .div6 {
-    color: silver;
+    color: whitesmoke;
     font-size: 45px;
     font-family: 'Ubuntu', sans-serif;
     padding: 40vh 2vw;
     background-color: white;
-    background-image: linear-gradient(0deg, white 10%, black 70%);
+    background-image: linear-gradient(0deg, white 0%, grey 95%);
     /* background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #ffffff 74%); */
     /* background-color: #ffffff;
